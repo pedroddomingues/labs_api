@@ -1,0 +1,722 @@
+{
+    "id": 86668,
+    "email": "pehenriq@student.42sp.org.br",
+    "login": "pehenriq",
+    "first_name": "Pedro",
+    "last_name": "Henrique barbosa domingues",
+    "usual_first_name": null,
+    "url": "https://api.intra.42.fr/v2/users/pehenriq",
+    "phone": "hidden",
+    "displayname": "Pedro Henrique Barbosa Domingues",
+    "usual_full_name": "Pedro Henrique Barbosa Domingues",
+    "image_url": "https://cdn.intra.42.fr/users/default.png",
+    "staff?": false,
+    "correction_point": 3,
+    "pool_month": "march",
+    "pool_year": "2021",
+    "location": null,
+    "wallet": 123,
+    "anonymize_date": "2022-08-17T00:00:00.000-03:00",
+    "created_at": "2021-03-18T22:01:44.524Z",
+    "updated_at": "2021-08-15T18:17:26.088Z",
+    "groups": [],
+    "cursus_users": [
+        {
+            "grade": "Learner",
+            "level": 1.52,
+            "skills": [
+                {
+                    "id": 1,
+                    "name": "Algorithms & AI",
+                    "level": 1.8900000000000001
+                },
+                {
+                    "id": 3,
+                    "name": "Rigor",
+                    "level": 1.45
+                },
+                {
+                    "id": 4,
+                    "name": "Unix",
+                    "level": 1.08
+                },
+                {
+                    "id": 2,
+                    "name": "Imperative programming",
+                    "level": 0.68
+                }
+            ],
+            "blackholed_at": "2021-11-07T13:00:00.000Z",
+            "id": 122287,
+            "begin_at": "2021-05-10T13:00:00.000Z",
+            "end_at": null,
+            "cursus_id": 21,
+            "has_coalition": false,
+            "created_at": "2021-05-07T16:07:40.707Z",
+            "updated_at": "2021-05-10T12:24:20.012Z",
+            "user": {
+                "id": 86668,
+                "login": "pehenriq",
+                "url": "https://api.intra.42.fr/v2/users/pehenriq",
+                "created_at": "2021-03-18T22:01:44.524Z",
+                "updated_at": "2021-08-15T18:17:26.088Z"
+            },
+            "cursus": {
+                "id": 21,
+                "created_at": "2019-07-29T08:45:17.896Z",
+                "name": "42cursus",
+                "slug": "42cursus"
+            }
+        },
+        {
+            "grade": null,
+            "level": 6.58,
+            "skills": [],
+            "blackholed_at": null,
+            "id": 116240,
+            "begin_at": "2021-03-29T13:15:00.000Z",
+            "end_at": "2021-04-17T23:42:00.000Z",
+            "cursus_id": 36,
+            "has_coalition": false,
+            "created_at": "2021-03-29T12:49:59.864Z",
+            "updated_at": "2021-04-27T17:19:15.506Z",
+            "user": {
+                "id": 86668,
+                "login": "pehenriq",
+                "url": "https://api.intra.42.fr/v2/users/pehenriq",
+                "created_at": "2021-03-18T22:01:44.524Z",
+                "updated_at": "2021-08-15T18:17:26.088Z"
+            },
+            "cursus": {
+                "id": 36,
+                "created_at": "2020-09-28T20:18:44.438Z",
+                "name": "Basecamp",
+                "slug": "basecamp"
+            }
+        },
+        {
+            "grade": null,
+            "level": 0,
+            "skills": [],
+            "blackholed_at": null,
+            "id": 115269,
+            "begin_at": "2021-03-19T01:14:54.315Z",
+            "end_at": "2021-04-17T23:42:00.000Z",
+            "cursus_id": 38,
+            "has_coalition": false,
+            "created_at": "2021-03-18T22:13:55.475Z",
+            "updated_at": "2021-04-27T17:19:17.040Z",
+            "user": {
+                "id": 86668,
+                "login": "pehenriq",
+                "url": "https://api.intra.42.fr/v2/users/pehenriq",
+                "created_at": "2021-03-18T22:01:44.524Z",
+                "updated_at": "2021-08-15T18:17:26.088Z"
+            },
+            "cursus": {
+                "id": 38,
+                "created_at": "2020-10-19T20:19:23.526Z",
+                "name": "Basecamp WarmUp",
+                "slug": "basecamp-warmup"
+            }
+        }
+    ],
+    "projects_users": [
+        {
+            "id": 2287083,
+            "occurrence": 0,
+            "final_mark": null,
+            "status": "in_progress",
+            "validated?": null,
+            "current_team_id": 3714007,
+            "project": {
+                "id": 1316,
+                "name": "ft_printf",
+                "slug": "42cursus-ft_printf",
+                "parent_id": null
+            },
+            "cursus_ids": [
+                21
+            ],
+            "marked_at": null,
+            "marked": false,
+            "retriable_at": null,
+            "created_at": "2021-08-10T21:23:18.306Z",
+            "updated_at": "2021-08-10T21:24:51.186Z"
+        },
+        {
+            "id": 2219446,
+            "occurrence": 1,
+            "final_mark": 125,
+            "status": "finished",
+            "validated?": true,
+            "current_team_id": 3687141,
+            "project": {
+                "id": 1327,
+                "name": "get_next_line",
+                "slug": "42cursus-get_next_line",
+                "parent_id": null
+            },
+            "cursus_ids": [
+                21
+            ],
+            "marked_at": "2021-08-10T20:48:24.098Z",
+            "marked": true,
+            "retriable_at": "2021-08-11T20:48:24.174Z",
+            "created_at": "2021-06-28T18:12:23.548Z",
+            "updated_at": "2021-08-10T20:48:24.189Z"
+        },
+        {
+            "id": 2175591,
+            "occurrence": 1,
+            "final_mark": 115,
+            "status": "finished",
+            "validated?": true,
+            "current_team_id": 3605635,
+            "project": {
+                "id": 1314,
+                "name": "Libft",
+                "slug": "42cursus-libft",
+                "parent_id": null
+            },
+            "cursus_ids": [
+                21
+            ],
+            "marked_at": "2021-06-28T18:10:27.230Z",
+            "marked": true,
+            "retriable_at": "2021-06-29T18:10:27.344Z",
+            "created_at": "2021-05-18T00:24:16.623Z",
+            "updated_at": "2021-06-28T18:10:27.359Z"
+        },
+        {
+            "id": 2155807,
+            "occurrence": 0,
+            "final_mark": 48,
+            "status": "finished",
+            "validated?": true,
+            "current_team_id": 3542849,
+            "project": {
+                "id": 1839,
+                "name": "Basecamp Final Exam",
+                "slug": "basecamp-final-exam",
+                "parent_id": null
+            },
+            "cursus_ids": [
+                36
+            ],
+            "marked_at": "2021-04-26T17:02:17.348Z",
+            "marked": true,
+            "retriable_at": null,
+            "created_at": "2021-04-14T13:56:18.439Z",
+            "updated_at": "2021-04-26T17:02:17.461Z"
+        },
+        {
+            "id": 2148682,
+            "occurrence": 0,
+            "final_mark": 24,
+            "status": "finished",
+            "validated?": false,
+            "current_team_id": 3532769,
+            "project": {
+                "id": 1838,
+                "name": "Basecamp Exam 01",
+                "slug": "basecamp-exam-01",
+                "parent_id": null
+            },
+            "cursus_ids": [
+                36
+            ],
+            "marked_at": "2021-04-19T14:26:51.685Z",
+            "marked": true,
+            "retriable_at": null,
+            "created_at": "2021-04-06T18:24:53.186Z",
+            "updated_at": "2021-04-19T14:26:51.707Z"
+        },
+        {
+            "id": 2158453,
+            "occurrence": 1,
+            "final_mark": 0,
+            "status": "finished",
+            "validated?": false,
+            "current_team_id": 3546751,
+            "project": {
+                "id": 1826,
+                "name": "Basecamp C 06",
+                "slug": "basecamp-c-06",
+                "parent_id": null
+            },
+            "cursus_ids": [
+                36
+            ],
+            "marked_at": "2021-04-17T11:24:54.097Z",
+            "marked": true,
+            "retriable_at": "2021-04-17T13:35:18.176Z",
+            "created_at": "2021-04-17T06:16:38.774Z",
+            "updated_at": "2021-04-17T12:55:18.198Z"
+        },
+        {
+            "id": 2158434,
+            "occurrence": 1,
+            "final_mark": 30,
+            "status": "finished",
+            "validated?": false,
+            "current_team_id": 3546640,
+            "project": {
+                "id": 1825,
+                "name": "Basecamp C 05",
+                "slug": "basecamp-c-05",
+                "parent_id": null
+            },
+            "cursus_ids": [
+                36
+            ],
+            "marked_at": "2021-04-17T12:03:36.846Z",
+            "marked": true,
+            "retriable_at": "2021-04-17T12:43:36.880Z",
+            "created_at": "2021-04-17T04:58:13.293Z",
+            "updated_at": "2021-04-17T12:03:36.902Z"
+        },
+        {
+            "id": 2157056,
+            "occurrence": 2,
+            "final_mark": 100,
+            "status": "finished",
+            "validated?": true,
+            "current_team_id": 3546602,
+            "project": {
+                "id": 1823,
+                "name": "Basecamp C 03",
+                "slug": "basecamp-c-03",
+                "parent_id": null
+            },
+            "cursus_ids": [
+                36
+            ],
+            "marked_at": "2021-04-17T05:37:47.317Z",
+            "marked": true,
+            "retriable_at": "2021-04-17T06:37:47.416Z",
+            "created_at": "2021-04-15T15:03:22.773Z",
+            "updated_at": "2021-04-17T05:37:47.443Z"
+        },
+        {
+            "id": 2158296,
+            "occurrence": 1,
+            "final_mark": 100,
+            "status": "finished",
+            "validated?": true,
+            "current_team_id": 3546520,
+            "project": {
+                "id": 1824,
+                "name": "Basecamp C 04",
+                "slug": "basecamp-c-04",
+                "parent_id": null
+            },
+            "cursus_ids": [
+                36
+            ],
+            "marked_at": "2021-04-17T04:54:43.286Z",
+            "marked": true,
+            "retriable_at": "2021-04-17T05:34:43.385Z",
+            "created_at": "2021-04-16T19:23:18.382Z",
+            "updated_at": "2021-04-17T04:54:43.401Z"
+        },
+        {
+            "id": 2153162,
+            "occurrence": 3,
+            "final_mark": 75,
+            "status": "finished",
+            "validated?": true,
+            "current_team_id": 3546159,
+            "project": {
+                "id": 1822,
+                "name": "Basecamp C 02",
+                "slug": "basecamp-c-02",
+                "parent_id": null
+            },
+            "cursus_ids": [
+                36
+            ],
+            "marked_at": "2021-04-16T19:15:45.559Z",
+            "marked": true,
+            "retriable_at": "2021-04-16T21:15:45.680Z",
+            "created_at": "2021-04-12T23:42:07.795Z",
+            "updated_at": "2021-04-16T19:15:45.701Z"
+        },
+        {
+            "id": 2148530,
+            "occurrence": 1,
+            "final_mark": 100,
+            "status": "finished",
+            "validated?": true,
+            "current_team_id": 3543632,
+            "project": {
+                "id": 1821,
+                "name": "Basecamp C 01",
+                "slug": "basecamp-c-01",
+                "parent_id": null
+            },
+            "cursus_ids": [
+                36
+            ],
+            "marked_at": "2021-04-15T14:51:37.383Z",
+            "marked": true,
+            "retriable_at": "2021-04-15T15:31:37.465Z",
+            "created_at": "2021-04-06T14:38:18.926Z",
+            "updated_at": "2021-04-15T14:51:37.487Z"
+        },
+        {
+            "id": 2144720,
+            "occurrence": 0,
+            "final_mark": 71,
+            "status": "finished",
+            "validated?": true,
+            "current_team_id": 3526923,
+            "project": {
+                "id": 1820,
+                "name": "Basecamp C 00",
+                "slug": "basecamp-c-00",
+                "parent_id": null
+            },
+            "cursus_ids": [
+                36
+            ],
+            "marked_at": "2021-04-12T19:51:45.478Z",
+            "marked": true,
+            "retriable_at": "2021-04-12T20:11:45.541Z",
+            "created_at": "2021-04-01T01:30:27.629Z",
+            "updated_at": "2021-04-12T19:51:45.558Z"
+        },
+        {
+            "id": 2148982,
+            "occurrence": 0,
+            "final_mark": 0,
+            "status": "finished",
+            "validated?": false,
+            "current_team_id": 3536383,
+            "project": {
+                "id": 1835,
+                "name": "Basecamp Rush 01",
+                "slug": "basecamp-rush-01",
+                "parent_id": null
+            },
+            "cursus_ids": [
+                36
+            ],
+            "marked_at": "2021-04-12T17:46:08.044Z",
+            "marked": true,
+            "retriable_at": null,
+            "created_at": "2021-04-07T01:04:46.941Z",
+            "updated_at": "2021-04-12T17:46:08.069Z"
+        },
+        {
+            "id": 2143018,
+            "occurrence": 0,
+            "final_mark": 48,
+            "status": "finished",
+            "validated?": true,
+            "current_team_id": 3524679,
+            "project": {
+                "id": 1837,
+                "name": "Basecamp Exam 00",
+                "slug": "basecamp-exam-00",
+                "parent_id": null
+            },
+            "cursus_ids": [
+                36
+            ],
+            "marked_at": "2021-04-11T16:21:39.119Z",
+            "marked": true,
+            "retriable_at": null,
+            "created_at": "2021-03-30T13:38:13.125Z",
+            "updated_at": "2021-04-11T18:32:05.950Z"
+        },
+        {
+            "id": 2143175,
+            "occurrence": 1,
+            "final_mark": 70,
+            "status": "finished",
+            "validated?": true,
+            "current_team_id": 3531525,
+            "project": {
+                "id": 1818,
+                "name": "Basecamp Shell 01",
+                "slug": "basecamp-shell-01",
+                "parent_id": null
+            },
+            "cursus_ids": [
+                36
+            ],
+            "marked_at": "2021-04-06T14:36:43.339Z",
+            "marked": true,
+            "retriable_at": "2021-04-06T15:16:43.432Z",
+            "created_at": "2021-03-30T16:29:30.923Z",
+            "updated_at": "2021-04-06T14:36:43.447Z"
+        },
+        {
+            "id": 2146140,
+            "occurrence": 0,
+            "final_mark": 120,
+            "status": "finished",
+            "validated?": true,
+            "current_team_id": 3529010,
+            "project": {
+                "id": 1834,
+                "name": "Basecamp Rush 00",
+                "slug": "basecamp-rush-00",
+                "parent_id": null
+            },
+            "cursus_ids": [
+                36
+            ],
+            "marked_at": "2021-04-05T18:24:15.986Z",
+            "marked": true,
+            "retriable_at": null,
+            "created_at": "2021-04-02T21:12:52.346Z",
+            "updated_at": "2021-04-05T18:24:16.780Z"
+        },
+        {
+            "id": 2141942,
+            "occurrence": 1,
+            "final_mark": 100,
+            "status": "finished",
+            "validated?": true,
+            "current_team_id": 3525369,
+            "project": {
+                "id": 1817,
+                "name": "Basecamp Shell 00",
+                "slug": "basecamp-shell-00",
+                "parent_id": null
+            },
+            "cursus_ids": [
+                36
+            ],
+            "marked_at": "2021-04-01T00:44:23.721Z",
+            "marked": true,
+            "retriable_at": "2021-04-01T01:24:23.821Z",
+            "created_at": "2021-03-29T16:12:27.738Z",
+            "updated_at": "2021-04-01T00:44:23.836Z"
+        },
+        {
+            "id": 2141499,
+            "occurrence": 2,
+            "final_mark": 100,
+            "status": "finished",
+            "validated?": true,
+            "current_team_id": 3523191,
+            "project": {
+                "id": 1819,
+                "name": "Basecamp Eu Aceito",
+                "slug": "basecamp-eu-aceito",
+                "parent_id": null
+            },
+            "cursus_ids": [
+                36
+            ],
+            "marked_at": "2021-03-29T16:10:06.281Z",
+            "marked": true,
+            "retriable_at": "2021-03-29T17:10:06.359Z",
+            "created_at": "2021-03-29T13:34:06.244Z",
+            "updated_at": "2021-03-29T16:11:17.123Z"
+        }
+    ],
+    "languages_users": [
+        {
+            "id": 381942,
+            "language_id": 17,
+            "user_id": 86668,
+            "position": 1,
+            "created_at": "2021-06-28T04:52:03.251Z"
+        },
+        {
+            "id": 381943,
+            "language_id": 2,
+            "user_id": 86668,
+            "position": 2,
+            "created_at": "2021-06-28T04:52:03.312Z"
+        },
+        {
+            "id": 381944,
+            "language_id": 1,
+            "user_id": 86668,
+            "position": 3,
+            "created_at": "2021-06-28T04:52:03.378Z"
+        }
+    ],
+    "achievements": [
+        {
+            "id": 4,
+            "name": "Code Explorer",
+            "description": "Valided your first project.",
+            "tier": "none",
+            "kind": "project",
+            "visible": true,
+            "image": "/uploads/achievement/image/4/PRO002.svg",
+            "nbr_of_success": 1,
+            "users_url": "https://api.intra.42.fr/v2/achievements/4/users"
+        },
+        {
+            "id": 340,
+            "name": "Comunidade I",
+            "description": "Participou da maioria dos eventos da primeira semana do Basecamp.",
+            "tier": "easy",
+            "kind": "pedagogy",
+            "visible": true,
+            "image": "/uploads/achievement/image/340/Comunidade_I.svg",
+            "nbr_of_success": null,
+            "users_url": "https://api.intra.42.fr/v2/achievements/340/users"
+        },
+        {
+            "id": 341,
+            "name": "Comunidade II",
+            "description": "Participou da maioria dos eventos da segunda semana do Basecamp.",
+            "tier": "medium",
+            "kind": "pedagogy",
+            "visible": true,
+            "image": "/uploads/achievement/image/341/Comunidade_II.svg",
+            "nbr_of_success": null,
+            "users_url": "https://api.intra.42.fr/v2/achievements/341/users"
+        },
+        {
+            "id": 332,
+            "name": "Explorador",
+            "description": "Ativo 5/7 dias da terceira semana do Basecamp.\r\n",
+            "tier": "hard",
+            "kind": "pedagogy",
+            "visible": true,
+            "image": "/uploads/achievement/image/332/Explorador_Exploradora.svg",
+            "nbr_of_success": null,
+            "users_url": "https://api.intra.42.fr/v2/achievements/332/users"
+        },
+        {
+            "id": 333,
+            "name": "Foco I",
+            "description": "Atingir na segunda semana o número de pontos conquistados da primeira semana do Basecamp.",
+            "tier": "medium",
+            "kind": "pedagogy",
+            "visible": true,
+            "image": "/uploads/achievement/image/333/Foco_I.svg",
+            "nbr_of_success": null,
+            "users_url": "https://api.intra.42.fr/v2/achievements/333/users"
+        },
+        {
+            "id": 331,
+            "name": "Primeiras Trilhas",
+            "description": "Ativo 5/7 dias da segunda semana do Basecamp.\r\n",
+            "tier": "medium",
+            "kind": "pedagogy",
+            "visible": true,
+            "image": "/uploads/achievement/image/331/Primeiras_Trilhas.svg",
+            "nbr_of_success": null,
+            "users_url": "https://api.intra.42.fr/v2/achievements/331/users"
+        },
+        {
+            "id": 330,
+            "name": "Reconhecimento de Campo",
+            "description": "Ativo 5/7 dias da primeira semana do Basecamp.\r\n",
+            "tier": "easy",
+            "kind": "pedagogy",
+            "visible": true,
+            "image": "/uploads/achievement/image/330/Reconhecimento_de_Campo.svg",
+            "nbr_of_success": null,
+            "users_url": "https://api.intra.42.fr/v2/achievements/330/users"
+        },
+        {
+            "id": 25,
+            "name": "Rigorous Basterd",
+            "description": "Validated 3 projects in a row (Piscine days included).",
+            "tier": "none",
+            "kind": "project",
+            "visible": true,
+            "image": "/uploads/achievement/image/25/PRO010.svg",
+            "nbr_of_success": 3,
+            "users_url": "https://api.intra.42.fr/v2/achievements/25/users"
+        },
+        {
+            "id": 347,
+            "name": "Super Vila",
+            "description": "Mais de 80% da Vila esteve ativa 5/7 dias do Basecamp.",
+            "tier": "challenge",
+            "kind": "pedagogy",
+            "visible": true,
+            "image": "/uploads/achievement/image/347/Super_Villa.svg",
+            "nbr_of_success": null,
+            "users_url": "https://api.intra.42.fr/v2/achievements/347/users"
+        },
+        {
+            "id": 344,
+            "name": "Vila Unida I",
+            "description": "Mais de 80% da Vila esteve ativa 5/7 dias da primeira semana do Basecamp.",
+            "tier": "easy",
+            "kind": "pedagogy",
+            "visible": true,
+            "image": "/uploads/achievement/image/344/Vila_Unida_I.svg",
+            "nbr_of_success": null,
+            "users_url": "https://api.intra.42.fr/v2/achievements/344/users"
+        },
+        {
+            "id": 345,
+            "name": "Vila Unida II",
+            "description": "Mais de 80% da Vila esteve ativa 5/7 dias da segunda semana do Basecamp.",
+            "tier": "medium",
+            "kind": "pedagogy",
+            "visible": true,
+            "image": "/uploads/achievement/image/345/Vila_Unida_II.svg",
+            "nbr_of_success": null,
+            "users_url": "https://api.intra.42.fr/v2/achievements/345/users"
+        },
+        {
+            "id": 348,
+            "name": "Vila Unida III",
+            "description": "Mais de 80% da Vila esteve ativa 5/7 dias da terceira semana do Basecamp.",
+            "tier": "hard",
+            "kind": "pedagogy",
+            "visible": true,
+            "image": "/uploads/achievement/image/348/Vila_Unida_III.svg",
+            "nbr_of_success": null,
+            "users_url": "https://api.intra.42.fr/v2/achievements/348/users"
+        }
+    ],
+    "titles": [],
+    "titles_users": [],
+    "partnerships": [],
+    "patroned": [],
+    "patroning": [],
+    "expertises_users": [],
+    "roles": [],
+    "campus": [
+        {
+            "id": 20,
+            "name": "São-Paulo",
+            "time_zone": "America/Sao_Paulo",
+            "language": {
+                "id": 17,
+                "name": "Brazilian Portuguese",
+                "identifier": "pt_br",
+                "created_at": "2020-12-10T14:15:00.994Z",
+                "updated_at": "2021-08-05T07:27:42.871Z"
+            },
+            "users_count": 1744,
+            "vogsphere_id": 14,
+            "country": "Brazil",
+            "address": "Rua Aspicuelta, 422, cj. 71A",
+            "zip": "05433-010",
+            "city": "São Paulo",
+            "website": "https://42sp.org.br",
+            "facebook": "",
+            "twitter": "",
+            "active": true,
+            "email_extension": "42sp.org.br",
+            "default_hidden_phone": false
+        }
+    ],
+    "campus_users": [
+        {
+            "id": 78471,
+            "user_id": 86668,
+            "campus_id": 20,
+            "is_primary": true,
+            "created_at": "2021-03-18T22:01:44.544Z",
+            "updated_at": "2021-03-18T22:01:44.544Z"
+        }
+    ]
+}
