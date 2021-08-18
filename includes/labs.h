@@ -68,4 +68,8 @@ typedef struct s_memory_struct
 	size_t size;
 }				t_memory_struct;
 
+int get_user(t_user *user, char *login, char *token);
+
+char *get_token(char *uid, char *secret);
+
 #endif
