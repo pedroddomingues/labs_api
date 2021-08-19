@@ -8,7 +8,7 @@
 # include <string.h>
 # include <curl/curl.h>
 # include <libpq-fe.h>
-# include "json.h"
+# include <json-c/json.h>
 
 typedef struct s_user_cursus
 {
@@ -39,7 +39,6 @@ typedef struct s_user_projects
 	char			*retriable_at;
 	char			*created_at;
 	char			*updated_at;
-	int				cursus_ids[];
 }					t_user_projects;
 
 typedef struct s_user
@@ -58,7 +57,7 @@ typedef struct s_user
     char			*pool_month;
     char			*pool_year;
     char			*location;
-	t_user_cursus	cursus[32];
+	t_user_cursus	cursus[64];
 	t_user_projects	projects[];
 }					t_user;
 
@@ -68,8 +67,10 @@ typedef struct s_memory_struct
 	size_t size;
 }				t_memory_struct;
 
-int get_user(t_user *user, char *login, char *token);
+int		get_user(t_user *user, char *login, char *token);
 
-char *get_token(char *uid, char *secret);
+char	*get_token(char *uid, char *secret);
+
+void	user_json_to_struct(t_user *user, char *user_json);
 
 #endif

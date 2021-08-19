@@ -6,11 +6,11 @@
 /*   By: pehenriq <pehenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 00:54:29 by pehenriq          #+#    #+#             */
-/*   Updated: 2021/08/18 02:38:36 by pehenriq         ###   ########.fr       */
+/*   Updated: 2021/08/19 00:05:04 by pehenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "labs.h"
+#include "../../includes/labs.h"
 
 static void
 exit_nicely(PGconn *conn)
@@ -37,7 +37,7 @@ main(int argc, char **argv)
     if (argc > 1)
         conninfo = argv[1];
     else
-        conninfo = "dbname = postgres host = database-1.cauc9jlrmnzc.sa-east-1.rds.amazonaws.com user = postgres password = Kul5kC6LNILISera2smE";
+        conninfo = "dbname = 42sp_labs host = database-1.cauc9jlrmnzc.sa-east-1.rds.amazonaws.com user = postgres password = Kul5kC6LNILISera2smE";
 
     /* Make a connection to the database */
     conn = PQconnectdb(conninfo);
