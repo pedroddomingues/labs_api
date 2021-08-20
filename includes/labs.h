@@ -8,7 +8,7 @@
 # include <string.h>
 # include <curl/curl.h>
 # include <libpq-fe.h>
-// # include <json-c/json.h>
+# include <json-c/json.h>
 
 typedef struct s_user_cursus
 {
@@ -48,7 +48,6 @@ typedef struct s_user
     char			*login;
     char			*first_name;
     char			*last_name;
-    char			*usual_first_name;
     char			*url;
     char			*displayname;
     char			*image_url;
@@ -56,7 +55,6 @@ typedef struct s_user
     int				correction_point;
     char			*pool_month;
     char			*pool_year;
-    char			*location;
 	t_user_cursus	cursus[64];
 	t_user_projects	projects[];
 }					t_user;
@@ -67,14 +65,22 @@ typedef struct s_memory_struct
 	size_t size;
 }				t_memory_struct;
 
-int		get_user(t_user *user, char *login, char *token);
+char	*get_user(t_user *user, char *login, char *token);
 
 char	*get_token(char *uid, char *secret);
 
-void	user_json_to_struct(t_user *user, char *user_json);
+char	*user_json_to_struct(t_user *user, char *user_json);
 
 PGconn	*db_connect(char *connection_information);
 
 void	db_disconnect(PGconn *conn);
+
+int		db_push_user(char *user_info, PGconn *conn);
+
+int		db_pull_user(char *login, PGconn *conn);
+
+char	*ft_ullitoa_base(unsigned long long int n, char *base);
+
+char	*ft_itoa(int n);
 
 #endif

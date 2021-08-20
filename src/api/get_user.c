@@ -6,7 +6,7 @@
 /*   By: pehenriq <pehenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 23:03:29 by pehenriq          #+#    #+#             */
-/*   Updated: 2021/08/18 23:08:25 by pehenriq         ###   ########.fr       */
+/*   Updated: 2021/08/19 23:43:04 by pehenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static size_t	save(char *buff, size_t size, size_t nmemb, void *data)
 }
 
 //returns 1 if ok, -1 if error, 0 if response is empty
-int get_user(t_user *user, char *login, char *token)
+char	*get_user(t_user *user, char *login, char *token)
 {
 	CURL *curl;
 	CURLcode response;
@@ -61,14 +61,12 @@ int get_user(t_user *user, char *login, char *token)
 		{
 			fprintf(stderr, "curl_easy_perform() failed: %s\n",
 						curl_easy_strerror(response));
-			return (-1);
+			free(response_data.memory);
+			return (NULL);
 		}
-		// // function to parse the response_data into the structs like:
-		// printf("%s\n\n\n\n", response_data.memory);
-		user_json_to_struct(user, response_data.memory);
 		curl_easy_cleanup(curl);
 		curl_slist_free_all(header);
 	}
 	curl_global_cleanup();
-	return (1);
+	return (response_data.memory);
 }
