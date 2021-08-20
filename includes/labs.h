@@ -8,7 +8,7 @@
 # include <string.h>
 # include <curl/curl.h>
 # include <libpq-fe.h>
-# include <json-c/json.h>
+// # include <json-c/json.h>
 
 typedef struct s_user_cursus
 {
@@ -72,5 +72,9 @@ int		get_user(t_user *user, char *login, char *token);
 char	*get_token(char *uid, char *secret);
 
 void	user_json_to_struct(t_user *user, char *user_json);
+
+PGconn	*db_connect(char *connection_information);
+
+void	db_disconnect(PGconn *conn);
 
 #endif
