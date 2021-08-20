@@ -6,7 +6,7 @@
 /*   By: pehenriq <pehenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 23:03:29 by pehenriq          #+#    #+#             */
-/*   Updated: 2021/08/18 21:58:21 by pehenriq         ###   ########.fr       */
+/*   Updated: 2021/08/20 21:01:36 by pehenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ char *get_token(char *uid, char *secret)
 	char  url[] = "https://api.intra.42.fr/oauth/token";
 	char  data[1024] = "grant_type=client_credentials&client_id=";
 	t_memory_struct response_data;
+	char	*token;
 
 	response_data.memory = malloc(1);
 	response_data.size = 0;
@@ -88,5 +89,9 @@ char *get_token(char *uid, char *secret)
 		curl_easy_cleanup(curl);
 	}
 	curl_global_cleanup();
+	// if (strstr(response_data.memory, "error"))
+	// 	token = "error";
+	// else
+		// token = ft_substr(response_data.memory, 17, 64);
 	return (ft_substr(response_data.memory, 17, 64));
 }
