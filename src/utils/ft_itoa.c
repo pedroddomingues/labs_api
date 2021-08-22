@@ -6,11 +6,11 @@
 /*   By: pehenriq <pehenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 23:17:46 by pehenriq          #+#    #+#             */
-/*   Updated: 2021/08/19 23:18:34 by pehenriq         ###   ########.fr       */
+/*   Updated: 2021/08/22 15:46:57 by pehenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/labs.h"
+#include "../../include/labs.h"
 
 static	size_t	get_width(int n)
 {

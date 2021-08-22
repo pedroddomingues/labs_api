@@ -6,11 +6,11 @@
 /*   By: pehenriq <pehenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 00:54:29 by pehenriq          #+#    #+#             */
-/*   Updated: 2021/08/20 02:03:40 by pehenriq         ###   ########.fr       */
+/*   Updated: 2021/08/22 15:46:57 by pehenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/labs.h"
+#include "../../include/labs.h"
 
 PGconn	*db_connect(char *connection_information)
 {

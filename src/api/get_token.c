@@ -6,11 +6,11 @@
 /*   By: pehenriq <pehenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 23:03:29 by pehenriq          #+#    #+#             */
-/*   Updated: 2021/08/20 21:01:36 by pehenriq         ###   ########.fr       */
+/*   Updated: 2021/08/22 15:46:57 by pehenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/labs.h"
+#include "../../include/labs.h"
 
 static char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -46,17 +46,6 @@ static size_t	save(char *buff, size_t size, size_t nmemb, void *data)
 	return (realsize);
 }
 
-static char	*post_data(char *uid, char *secret)
-{
-	char	*data;
-
-	data = "grant_type=client_credentials&client_id=";
-	strcat(data, uid);
-	strcat(data, "&client_secret=");
-	strcat(data, secret);
-	return (data);
-}
-
 char *get_token(char *uid, char *secret)
 {
 	CURL *curl;
@@ -64,7 +53,6 @@ char *get_token(char *uid, char *secret)
 	char  url[] = "https://api.intra.42.fr/oauth/token";
 	char  data[1024] = "grant_type=client_credentials&client_id=";
 	t_memory_struct response_data;
-	char	*token;
 
 	response_data.memory = malloc(1);
 	response_data.size = 0;
@@ -89,9 +77,5 @@ char *get_token(char *uid, char *secret)
 		curl_easy_cleanup(curl);
 	}
 	curl_global_cleanup();
-	// if (strstr(response_data.memory, "error"))
-	// 	token = "error";
-	// else
-		// token = ft_substr(response_data.memory, 17, 64);
 	return (ft_substr(response_data.memory, 17, 64));
 }

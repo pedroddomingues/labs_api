@@ -6,11 +6,11 @@
 /*   By: pehenriq <pehenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 17:25:46 by pehenriq          #+#    #+#             */
-/*   Updated: 2021/08/20 04:30:50 by pehenriq         ###   ########.fr       */
+/*   Updated: 2021/08/22 15:46:57 by pehenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/labs.h"
+#include "../../include/labs.h"
 
 int	db_push_user(char *user_info, PGconn *conn)
 {
@@ -20,14 +20,13 @@ int	db_push_user(char *user_info, PGconn *conn)
 	query = malloc(sizeof(char) * 512 * 128);
 	strcpy(query, "INSERT INTO public.user VALUES (");
 	strcat(query, user_info);
-	strcat(query, ") ON CONFLICT (login) UPDATE;");
+	strcat(query, ") ON CONFLICT (id) DO UPDATE SET correction_point = EXCLUDED.correction_point;");
 	res = PQexec(conn, query);
 
-	if (PQresultStatus(res) != PGRES_COMMAND_OK) 
+	if (PQresultStatus(res) != PGRES_COMMAND_OK)
 	{
 		printf("%s", (char *)res);
 		free(query);
-		db_disconnect(conn);
 		return (-1);
 	}
 	PQclear(res);

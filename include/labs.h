@@ -7,8 +7,8 @@
 # include <stdio.h>
 # include <string.h>
 # include <curl/curl.h>
-// # include <libpq-fe.h>
-// # include <json-c/json.h>
+# include "db.h"
+# include "api42.h"
 
 typedef struct s_user_cursus
 {
@@ -29,11 +29,8 @@ typedef struct s_user_projects
 	int				final_mark;
 	char			*status;
 	int				validated;
-	unsigned long	current_team_id;
 	unsigned int	project_id;
 	char			*name;
-	char			*slug;
-	unsigned int	parent_id;
 	char			*marked_at;
 	int				marked;
 	char			*retriable_at;
@@ -45,18 +42,18 @@ typedef struct s_user
 {
 	int				id;
 	char			*email;
-    char			*login;
-    char			*first_name;
-    char			*last_name;
-    char			*url;
-    char			*displayname;
-    char			*image_url;
-    int				staff;
-    int				correction_point;
-    char			*pool_month;
-    char			*pool_year;
+	char			*login;
+	char			*first_name;
+	char			*last_name;
+	char			*url;
+	char			*displayname;
+	char			*image_url;
+	int				staff;
+	int				correction_point;
+	char			*pool_month;
+	char			*pool_year;
 	t_user_cursus	cursus[64];
-	t_user_projects	projects[];
+	t_user_projects	projects[128];
 }					t_user;
 
 typedef struct s_memory_struct
@@ -65,22 +62,22 @@ typedef struct s_memory_struct
 	size_t size;
 }				t_memory_struct;
 
-char	*get_user(t_user *user, char *login, char *token);
-
-char	*get_token(char *uid, char *secret);
-
 char	*user_json_to_struct(t_user *user, char *user_json);
 
-// PGconn	*db_connect(char *connection_information);
-
-// void	db_disconnect(PGconn *conn);
-
-// int		db_push_user(char *user_info, PGconn *conn);
-
-// int		db_pull_user(char *login, PGconn *conn);
+char	**user_projects_json_to_struct(t_user *user, char *user_json, int *n_projects);
 
 char	*ft_ullitoa_base(unsigned long long int n, char *base);
 
 char	*ft_itoa(int n);
+
+void	print_user(t_user *user);
+
+void	print_projects(t_user *user, int n_projects);
+
+void	print_analysis(t_user *user, int n_projects);
+
+int		get_average_grade_finished(t_user *user, int n_projects);
+
+int		get_average_grade_all(t_user *user, int n_projects);
 
 #endif

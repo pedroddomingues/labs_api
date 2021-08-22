@@ -6,11 +6,11 @@
 /*   By: pehenriq <pehenriq@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 23:03:29 by pehenriq          #+#    #+#             */
-/*   Updated: 2021/08/19 23:43:04 by pehenriq         ###   ########.fr       */
+/*   Updated: 2021/08/22 15:46:57 by pehenriq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/labs.h"
+#include "../../include/labs.h"
 
 static size_t	save(char *buff, size_t size, size_t nmemb, void *data)
 {
@@ -34,7 +34,7 @@ static size_t	save(char *buff, size_t size, size_t nmemb, void *data)
 }
 
 //returns 1 if ok, -1 if error, 0 if response is empty
-char	*get_user(t_user *user, char *login, char *token)
+char	*get_user(char *login, char *token)
 {
 	CURL *curl;
 	CURLcode response;
