@@ -1,8 +1,22 @@
-<!-- ## Script to get JWT token
-```bash
-curl -X POST --data "grant_type=client_credentials&client_id=CLIENT-ID&client_secret=CLIENT-SECRET" https://api.intra.42.fr/oauth/token
-```
-curl -X POST --data "grant_type=client_credentials&client_id=93ae758ab8266f7c4c419e58a605ea217aef2dd5c0776ac38521328dd9f0391f&client_secret=13c0e6d41d35465e40dbe6a1c67165c59940dc141c3443ddd9484b562187a7a9" https://api.intra.42.fr/oauth/token -->
+# UPDATE
+I've managed to do a simple HTTP server with ulfius in the last few hours and couldnt finish the Makefile.
+Created the labs42sp.tk free domain and used DigitalOcean to deploy.
+Still it just returns exactly the same response of 42 API but its connected to database.
+## How to run
+To compile the command line program:
+``gcc -I /usr/include/postgresql server.c -lulfius -lyder -lorcania ./src/api/*.c ./src/utils/*.c ./src/db/*.c -ljson-c -lcurl -lpq``
+
+To compile the server:
+``gcc -I /usr/include/postgresql main.c -lulfius -lyder -lorcania ./src/api/*.c ./src/utils/*.c ./src/db/*.c -ljson-c -lcurl -lpq``
+
+To run any of them, simply?
+``./a.out``
+
+### todos
+- Create dynamic HTML on each request for dedicated url and return
+- Get database connections as enviroment variables (the files in this repository has the credentials for accessing it but there is no sensitive data stored)
+- Parse the data into json to return only what is important.
+
 # 42sp_labs
 This project was done to match the 42sp labs program challenge.
 The goal is to consume the 42.fr API and fetch user data with the provided login, store that data in a database and some analysis.
