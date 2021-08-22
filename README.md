@@ -1,15 +1,19 @@
 # UPDATE
 I've managed to do a simple HTTP server with ulfius in the last few hours and couldnt finish the Makefile.
-Created the labs42sp.tk free domain and used DigitalOcean to deploy.
+Created the [labs42sp.tk](labs42sp.tk) free domain and used DigitalOcean to deploy.
 Still it just returns exactly the same response of 42 API but its connected to database.
+
 ## How to run
 To compile the command line program:
+
 ``gcc -I /usr/include/postgresql server.c -lulfius -lyder -lorcania ./src/api/*.c ./src/utils/*.c ./src/db/*.c -ljson-c -lcurl -lpq``
 
 To compile the server:
+
 ``gcc -I /usr/include/postgresql main.c -lulfius -lyder -lorcania ./src/api/*.c ./src/utils/*.c ./src/db/*.c -ljson-c -lcurl -lpq``
 
 To run any of them, simply?
+
 ``./a.out``
 
 ### todos
