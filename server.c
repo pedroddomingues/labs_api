@@ -8,22 +8,14 @@
 #include <ulfius.h>
 #include "include/labs.h"
 
-#define PORT 8095
+#define PORT 80
 #define PREFIX "/user"
 #define PREFIXJSON "/testjson"
 
 /**
  * callback functions declaration
  */
-int callback_get_test (const struct _u_request * request, struct _u_response * response, void * user_data);
-
-int callback_get_empty_response (const struct _u_request * request, struct _u_response * response, void * user_data);
-
-int callback_post_test (const struct _u_request * request, struct _u_response * response, void * user_data);
-
-int callback_all_test_foo (const struct _u_request * request, struct _u_response * response, void * user_data);
-
-int callback_get_cookietest (const struct _u_request * request, struct _u_response * response, void * user_data);
+int callback_user (const struct _u_request * request, struct _u_response * response, void * user_data);
 
 int callback_default (const struct _u_request * request, struct _u_response * response, void * user_data);
 
@@ -85,9 +77,7 @@ int main (int argc, char **argv)
 	instance.max_post_body_size = 1024;
 
 	// Endpoint list declaration
-	ulfius_add_endpoint_by_val(&instance, "GET", "/helloworld", NULL, 0, &callback_get_test, NULL);
-	ulfius_add_endpoint_by_val(&instance, "GET", PREFIX, "/empty", 0, &callback_get_empty_response, NULL);
-	ulfius_add_endpoint_by_val(&instance, "GET", PREFIX, "/:login", 0, &callback_all_test_foo, "user data 1");
+	ulfius_add_endpoint_by_val(&instance, "GET", PREFIX, "/:login", 0, &callback_user, NULL);
 
 	// default_endpoint declaration
 	ulfius_set_default_endpoint(&instance, &callback_default, NULL);
@@ -124,39 +114,9 @@ int main (int argc, char **argv)
 }
 
 /**
- * Callback function that put a "Hello World!" string in the response
- */
-int callback_get_test (const struct _u_request * request, struct _u_response * response, void * user_data)
-{
-	ulfius_set_string_body_response(response, 200, "Hello World, this is a test!");
-	return U_CALLBACK_CONTINUE;
-}
-
-/**
- * Callback function that put an empty response and a status 200
- */
-int callback_get_empty_response (const struct _u_request * request, struct _u_response * response, void * user_data)
-{
-	return U_CALLBACK_CONTINUE;
-}
-
-/**
- * Callback function that put a "Hello World!" and the post parameters send by the client in the response
- */
-int callback_post_test (const struct _u_request * request, struct _u_response * response, void * user_data)
-{
-	char * post_params = print_map(request->map_post_body);
-	char * response_body = msprintf("Hello World!\n%s", post_params);
-	ulfius_set_string_body_response(response, 200, response_body);
-	o_free(response_body);
-	o_free(post_params);
-	return U_CALLBACK_CONTINUE;
-}
-
-/**
  * Callback function that put "Hello World!" and all the data sent by the client in the response as string (http method, url, params, cookies, headers, post, json, and user specific data in the response
  */
-int callback_all_test_foo (const struct _u_request * request, struct _u_response * response, void * user_data)
+int callback_user (const struct _u_request * request, struct _u_response * response, void * user_data)
 {
 	char *url_params = print_map(request->map_url);
 	char *headers = print_map(request->map_header);
@@ -175,9 +135,9 @@ int callback_all_test_foo (const struct _u_request * request, struct _u_response
 	conn = db_connect(NULL);
 	user = o_malloc(sizeof(*user)*100);
 	if (request->map_url->nb_values > 2)
-		response_body = o_strdup("You should provide only the token as query param. The request is /user/:login?token=YOURTOKEN");
+		response_body = o_strdup("You should provide only the token as query param. The correct request is /user/:login?token=YOURTOKEN");
 	else if (strcmp(request->map_url->keys[0], "token"))
-		response_body = o_strdup("You should provide a token. The request is /user/:login?token=YOURTOKEN");
+		response_body = o_strdup("You should provide a token. The correct request is /user/:login?token=YOURTOKEN");
 	else
 	{
 		#ifndef _WIN32
@@ -233,6 +193,6 @@ int callback_all_test_foo (const struct _u_request * request, struct _u_response
  */
 int callback_default (const struct _u_request * request, struct _u_response * response, void * user_data)
 {
-	ulfius_set_string_body_response(response, 404, "Page not found.");
+	ulfius_set_string_body_response(response, 404, "Page not found. The correct request is /user/:login?token=YOURTOKEN");
 	return U_CALLBACK_CONTINUE;
 }
