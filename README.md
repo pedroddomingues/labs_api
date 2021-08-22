@@ -12,7 +12,7 @@ To compile the server:
 
 ``gcc -I /usr/include/postgresql main.c -lulfius -lyder -lorcania ./src/api/*.c ./src/utils/*.c ./src/db/*.c -ljson-c -lcurl -lpq``
 
-To run any of them, simply?
+To run any of them, simply:
 
 ``./a.out``
 
@@ -20,6 +20,7 @@ To run any of them, simply?
 - Create dynamic HTML on each request for dedicated url and return
 - Get database connections as enviroment variables (the files in this repository has the credentials for accessing it but there is no sensitive data stored)
 - Parse the data into json to return only what is important.
+- Do some login, possibly use intra's 
 
 # 42sp_labs
 This project was done to match the 42sp labs program challenge.
